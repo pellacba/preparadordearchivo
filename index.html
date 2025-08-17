@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preparador de archivo</title>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>
+        <img src="pellalogo.png" alt="Logo Pella" /> 
+        Preparador de archivo <span class="pill"> EXCEL -> CSV (comas)</span>
+      </h1>
+
+      <div id="drop" class="uploader" tabindex="0" role="button" aria-label="Zona para soltar o seleccionar archivo">
+        <p style="margin-top:0">Arrastrá tu Excel aquí o</p>
+        <label class="btn" for="file">Elegir archivo</label>
+        <input id="file" type="file" accept=".xlsx,.xls,.csv" />
+        <div style="margin-top:8px"><small>Formatos aceptados: .xlsx, .xls, .csv</small></div>
+      </div>
+
+      <div class="actions">
+        <input id="filename" type="text" placeholder="Nombre de salida (sin .csv)" />
+        <button id="process" disabled>Procesar y descargar CSV</button>
+        <button id="reset" class="secondary" disabled>Reiniciar</button>
+        <div id="status"></div>
+      </div>
+
+      <div id="previews" class="grid hidden">
+        <div>
+          <h3 style="margin:.2rem 0 .5rem">Vista previa: archivo original</h3>
+          <div id="preview-before"></div>
+        </div>
+        <div>
+          <h3 style="margin:.2rem 0 .5rem">Vista previa: resultado</h3>
+          <div id="preview-after"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

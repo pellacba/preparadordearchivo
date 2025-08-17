@@ -1,0 +1,170 @@
+:root {
+  --bg: #281207;
+  --card: #111827;
+  --muted: #9ca3af;
+  --text: #e5e7eb;
+  --accent: #f97316;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, #5a2d0c, #281207); /* degradado anaranjado más claro */
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid #1f2937;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(22px, 3.8vw, 32px);
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+h1 img {
+  height: 100px;
+}
+
+p.lead {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.uploader {
+  border: 2px dashed #374151;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: 0.2s;
+  background: rgba(31, 41, 55, 0.35);
+}
+
+.uploader:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label.btn {
+  display: inline-block;
+  cursor: pointer;
+  background: var(--accent);
+  color: #1a0c02;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  align-items: center;
+}
+
+button {
+  background: #ea580c;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button.secondary {
+  background: #374151;
+}
+
+small {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: #0b1220;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #1f2a44;
+  padding: 6px 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+th {
+  background: #0e1a33;
+  color: #cbd5e1;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #fb923c;
+  color: #1a0c02;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.ok {
+  color: #34d399;
+}
+
+.warn {
+  color: #f59e0b;
+}
+
+.err {
+  color: #f87171;
+}
+
+input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: var(--bg);
+  color: #e5e7eb;
+}
