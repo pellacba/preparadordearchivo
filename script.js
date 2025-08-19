@@ -63,7 +63,7 @@
     const vIdx = detectVendedorIndex(aoa);
     for(let r=1;r<aoa.length;r++){
       if(!aoa[r]) aoa[r]=[];
-      aoa[r][vIdx] = 1;
+      aoa[r][vIdx] = 221;
     }
 
     aoa = aoa.map(row => row.slice(1));
@@ -117,3 +117,4 @@
   $process.addEventListener('click', ()=>{ try{ processAOA(); downloadCSV(); } catch(err){ console.error(err); setStatus('Error al procesar / exportar.', 'err'); } });
   $reset.addEventListener('click', ()=>{ workbook=null; sheetName=null; originalAOA=null; resultAOA=null; input.value=''; setStatus('Listo para un nuevo archivo.'); $('#preview-before').innerHTML=''; $('#preview-after').innerHTML=''; $previews.classList.add('hidden'); $process.disabled=true; $reset.disabled=true; $fname.value=""; });
 })();
+
